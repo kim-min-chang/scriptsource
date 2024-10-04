@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td {
+        border: 1px solid black;
+      }
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="outside">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+    <p id="demo">Click me</p>
+    <script>
+      // table 클릭시 two => three, three => two
+      // 이벤트 대상 찾기 / 해야 할 함수 작성 / 연결
+      const table = document.getElementById("outside");
+      table.addEventListener("click", () => {
+        // t2 요소의 텍스트가 two => three, three => two
+        const t2 = document.querySelector("#t2");
+        // if ((t2.textContent = "three")) {
+        //   t2.textContent = "two";
+        // } else {
+        //   t2.textContent = "thtree";
+        // }
+        t2.textContent = t2.textContent == "three" ? "two" : "three";
+      });
+
+      // p요소 클릭 시 Good Job!! 변경
+      const p = document.querySelector("#demo");
+
+      //   p.addEventListener("click", () => {
+      //     p.innerHTML = "Good Job!!";
+      //   });
+
+      p.addEventListener("click", () => {
+        // e.target : 이벤트가 일어난 대상 == p
+        e.target.innerHTML = "Good Job!!";
+      });
+    </script>
+  </body>
+</html>

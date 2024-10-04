@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <input type="text" name="text1" id="text1" />
+      </div>
+      <!-- buttom 이  submit 인가? : action 이 가르키는 곳으로 폼안의 내용을 전송함  -->
+      <!-- <button>제출</button> : submit-->
+      <button type="submit">제출</button>
+    </form>
+    <p id="result"></p>
+    <script>
+      // 제출 버튼 클릭 시 text 에 입력한 값 가져와서 result 안에 보여주기
+      // button 이 submit 이라면
+      document.querySelector("form").addEventListener("submit", (e) => {
+        //submit 중지
+        e.preventDefault();
+        // text 에 입력한 값 가져오기
+        const text = document.querySelector("#text1");
+        //     //result 안에 보여주기
+        document.querySelector("#result").innerHTML = text.value;
+      });
+      //   botton 이 button 일때
+      //   document.querySelector("button").addEventListener("click", () => {
+      //     // text 에 입력한 값 가져오기
+      //     const text = document.querySelector("#text1");
+      //     // 입력한 값 alert 보여주기
+      //     // alert(text.value);
+      //     //result 안에 보여주기
+      //     document.querySelector("#result").innerHTML = text.value;
+      // });
+    </script>
+  </body>
+</html>

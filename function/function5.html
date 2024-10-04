@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // q1) 두 개의 숫자를 받아서 빼는 결과를 리턴하는 함수 작성
+      //     function 키워드 사용
+      function sub(a, b) {
+        return a - b;
+      }
+
+      console.log("sub(5,3) = ", sub(5, 3));
+
+      // q2) q1 에서 작성했던 함수를 함수 표현식으로 변경하기
+      const sub2 = function (a, b) {
+        return a - b;
+      };
+
+      console.log("sub2(5,3) = ", sub2(5, 3));
+
+      // q3) q2 에서 작성했던 함수를 화살표 함수로 변경하기
+      const sub3 = (a, b) => a - b;
+      console.log("sub3(5,3) = ", sub3(5, 3));
+
+      // q4) 한개의 숫자를 인자로 받아 그 숫자라 3의 배수인지 확인하는 함수 작성
+      //     3의 배수라면 화면에 "박수" 라는 글자 출력 / 아니라면 "통과" 출력
+      function multiply(num) {
+        if (num % 3 == 0) console.log("박수");
+        else console.log("통과");
+      }
+
+      multiply(5);
+      multiply(3);
+
+      // q5) q4 를 개선하여 3의 배수인 경우 "박수", 9의 배수인 경우 "박수x2", 나머지 "통과"
+      function multiply2(num) {
+        if (num % 3 == 0) {
+          if (num % 9 == 0) {
+            console.log("박수x2");
+          } else {
+            console.log("박수");
+          }
+        } else {
+          console.log("통과");
+        }
+      }
+
+      multiply2(9);
+      multiply2(3);
+      multiply2(5);
+
+      // q6) 시험 점수를 입력하면 결과를 알려주는 함수 작성
+      //     두과목을 합해서 120점 이상이면 합격, 단 한 과목이 40점 미만이면 과락으로 불합격
+      function pass(num1, num2) {
+        let hap = num1 + num2;
+        if (num1 >= 40 && num2 >= 40 && hap >= 120) {
+          console.log("합격");
+        } else {
+          console.log("불합격");
+        }
+      }
+      pass(40, 45);
+      pass(80, 40);
+
+      // q7) 3의 배수에서 박수를 치는 게 아니라 끝자리가 3,6,9로 끝나는 숫자라면 "박수" 출력
+      function multiply3(num) {
+        let digit = num % 10;
+
+        if (digit == 3 || digit == 6 || digit == 9) {
+          console.log("박수");
+        } else {
+          console.log("통과");
+        }
+      }
+
+      multiply3(10);
+      multiply3(16);
+    </script>
+  </body>
+</html>

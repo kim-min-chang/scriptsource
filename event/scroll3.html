@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        height: 150px;
+        border: 1px solid black;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+      ducimus. Fugiat necessitatibus tenetur sit illo vitae voluptatem nihil
+      ratione, corporis natus ipsa! Possimus tenetur suscipit eaque, ducimus
+      saepe, repellat et magni animi nobis beatae perferendis, eum veniam
+      doloremque dolore deleniti earum accusantium deserunt incidunt. Sequi
+      cupiditate voluptates tempore eaque iste, voluptas suscipit ut, quas
+      quisquam veniam consequuntur molestiae molestias eveniet voluptatem fugiat
+      obcaecati esse, ducimus laborum praesentium unde distinctio. Illo at omnis
+      ipsa explicabo voluptate deserunt tempore ipsum soluta officia laboriosam,
+      eum, quia quibusdam nam alias labore assumenda iste. Magni in, itaque
+      placeat harum reprehenderit perferendis possimus voluptatem accusantium
+      modi laudantium. Commodi non sunt laudantium dignissimos, ducimus
+      assumenda fugiat facere enim delectus voluptatibus nesciunt magni quaerat
+      aliquam odio sit officiis soluta provident maxime voluptates numquam
+      culpa! At incidunt, aperiam cupiditate saepe labore velit quia ut,
+      voluptatem repellendus praesentium iusto culpa ipsam tenetur officiis
+      mollitia molestias dolor. Doloribus labore laboriosam sapiente odit ab
+      voluptatem alias hic dolorem fugit ipsum quos sequi perferendis numquam
+      ipsa ullam, inventore tempore aspernatur! Vel similique non voluptatum
+      ratione officia labore, ipsam, unde accusantium harum tenetur quo optio
+      hic quaerat autem doloribus omnis fugit voluptates accusamus quam!
+      Repellendus, amet sunt et ipsam quis necessitatibus corporis impedit ipsa
+      nemo recusandae quod voluptatem pariatur aperiam facilis, sint vitae!
+      Officia at vitae repudiandae esse, explicabo harum et autem id vel quia
+      dolore qui itaque voluptates, rerum distinctio quibusdam fuga ea dolorum
+      placeat in. Eligendi laborum earum pariatur, autem explicabo itaque
+      ducimus necessitatibus adipisci quibusdam eius. Iste consectetur
+      cupiditate, maxime deleniti cumque officiis ab, similique quos repellendus
+      libero saepe necessitatibus accusantium fugiat quis ipsa nisi dolores
+      obcaecati nihil. Tempore, suscipit. Voluptate distinctio voluptates
+      ducimus aspernatur tempora. Pariatur cumque mollitia necessitatibus
+      voluptatibus obcaecati maxime laborum dicta soluta neque inventore. Eos
+      quia laborum vitae libero explicabo consectetur suscipit reprehenderit
+      quaerat placeat, praesentium temporibus?
+    </div>
+    <script>
+      const div = document.querySelector("div");
+      div.scrollTo(0, 100);
+      //   console.log(div.scrollY);
+      //   scrollHeight = 스크롤 높이 + div.heght(보이는 높이)
+      //   console.log("scrollHeight", div.scrollHeight);
+      //   console.log("clientHeight", div.clientHeight);
+
+      div.addEventListener("scroll", () => {
+        // console.log(div.scrollTop);
+
+        if (div.scrollTop == div.scrollHeight - div.clientHeight) {
+          alert("회원 약관을 다 읽었습니다.");
+        }
+      });
+    </script>
+  </body>
+</html>
