@@ -7,10 +7,10 @@
 
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const id = document.querySelector("#inputid");
+  const id = document.querySelector("#inputId");
   const email = document.querySelector("#staticEmail");
-  const password = document.querySelector("inputPassword");
-  const name = document.querySelector("inputName");
+  const password = document.querySelector("#inputPassword");
+  const name = document.querySelector("#inputName");
 
   const regId = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#])[0-9a-zA-Z!@#]{6,12}$/;
   const regPwd = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#*_])[0-9a-zA-Z!@#*_]{8,12}$/;
@@ -40,5 +40,5 @@ document.querySelector("form").addEventListener("submit", (e) => {
     email.closest("div").lastElementChild.innerHTML = "";
   }
 
-  //   e.target.submit();
+  //  e.target.submit();
 });
